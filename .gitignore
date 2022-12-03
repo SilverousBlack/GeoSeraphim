@@ -1,0 +1,33 @@
+# Python Cache
+
+*/__pycache__/*
+
+# Data Fragments
+
+## Lidar Data
+*.las
+
+## OrthoPhoto Data
+*.tif
+*.TIF
+*.geotif
+*.GEOTIF
+
+# Virtual Environments
+
+env/*
+venv/*
+env**/*
+
+# Visual Studio
+
+.vs/*
+.vscode/*
+*.code-workspace
+
+# General Directories
+
+files/*
+out/*
+build/*
+data/*
