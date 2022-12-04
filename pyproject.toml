@@ -1,0 +1,18 @@
+[project]
+name = "GeoSeraphim"
+version = "0.0.1dev20221205"
+authors = [
+  { name="Silverous Black", email="mail.silverousblack@gmail.com" },
+]
+description = "A centralized package for interfacing with geographical data."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"

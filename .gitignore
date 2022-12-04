@@ -28,6 +28,14 @@ env**/*
 # General Directories
 
 files/*
+misc/*
 out/*
 build/*
+dist/*
 data/*
+
+# Development Only Objects
+
+_upload_*.bat
+install.bat
+
