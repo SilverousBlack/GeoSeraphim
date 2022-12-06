@@ -1,6 +1,7 @@
 import pathlib as pl
 from io import open
 
+from GeoSeraphim.Core.__verify_sys_config import call as VerifySysConfig
 from GeoSeraphim.Core.__load_config import __DATABASE__ as SYSDB
 from GeoSeraphim.Core.__edit_type_conf import call as MakeTypeConfig
 
@@ -21,6 +22,7 @@ def call(
             SYSDB.SYSTEM_CONFIGURATION[kw + "/"] = val
         else:
             SYSDB.SYSTEM_CONFIGURATION[kw] = val
+    SYSDB.SYSTEM_CONFIGURATION = VerifySysConfig(SYSDB.SYSTEM_CONFIGURATION)
     cfg = open(
         str(pl.Path(__file__).parent) + "/sys.conf" if fp is None else pl.Path(fp),
         "w+", encoding="utf-8"
@@ -30,17 +32,4 @@ def call(
             build_string(kw, val) for kw, val in SYSDB.SYSTEM_CONFIGURATION.items()
         ]
     )
-    if "root" in kwargs.keys:
-        if not pl.Path(str(pl.Path(SYSDB.SYSTEM_CONFIGURATION["root"])) + "_seraphanda.conf").exists():
-            MakeTypeConfig(
-                name="Seraphanda",
-                ext="seraph",
-                tags=[ {"eid": "object"}, {"xpos": "int64"}, {"ypos": "int64"}, {"zpos": "int64"}, "..." ]
-            )
-        if not pl.Path(str(pl.Path(SYSDB.SYSTEM_CONFIGURATION["root"])) + "_seraphanda.conf").exists():
-            MakeTypeConfig(
-                name="GeoCSV",
-                ext="gcsv",
-                tags=[ {"eid": "object"}, {"xpos": "int64"}, {"ypos": "int64"}, {"zpos": "int64"}, "..." ]
-            )
-        
+    

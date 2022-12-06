@@ -1,6 +1,8 @@
 import pathlib as pl
 from io import open
 
+from GeoSeraphim.Core.__verify_sys_config import call as VerifySysConfig
+
 def call(fp: str | pl.Path = None):
     conf = {}
     cfg = open(
@@ -18,5 +20,5 @@ def call(fp: str | pl.Path = None):
         else:
             buf = chunk[1].strip().lower()
         conf[chunk[0].strip().lower()] = buf
-    return conf
+    return VerifySysConfig(conf)
     

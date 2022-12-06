@@ -22,6 +22,7 @@ from io import open
 
 ## System Imports
 
+from GeoSeraphim.Core.__verify_sys_config import call as VerifySysConfig
 from GeoSeraphim.Core.__load_config import call as LoadConfig, __DATABASE__ as SYSDB
 from GeoSeraphim.Core.__read_sys_conf import call as ReadSysConfig
 from GeoSeraphim.Core.__read_type_conf import call as ReadTypeConfig

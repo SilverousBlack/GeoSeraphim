@@ -1,6 +1,8 @@
 import pathlib as pl
 from io import open
 
+from GeoSeraphim.Core.__verify_sys_config import call as VerifySysConfig
+
 class __data:
     SYSTEM_CONFIGURATION: dict
     OUTPUT_CONFIGURATION: dict
@@ -65,8 +67,7 @@ def ReadType(typ: str, loc: str = None):
 
 def call(fp: str | pl.Path = None):
     global __DATABASE__
-    import sys
-    __DATABASE__.SYSTEM_CONFIGURATION = ReadSys(fp)
+    __DATABASE__.SYSTEM_CONFIGURATION = VerifySysConfig(ReadSys(fp))
     __DATABASE__.OUTPUT_CONFIGURATION = ReadType(
         __DATABASE__.SYSTEM_CONFIGURATION["output"], 
         __DATABASE__.SYSTEM_CONFIGURATION["root"] 
