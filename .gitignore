@@ -25,7 +25,6 @@ env**/*
 
 .vs/*
 .vscode/*
-*.code-workspace
 
 # General Directories
 
