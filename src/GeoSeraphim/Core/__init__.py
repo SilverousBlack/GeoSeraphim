@@ -48,7 +48,7 @@ if not pl.Path(str(pl.Path(__file__).parent if "root" not in SYSDB.SYSTEM_CONFIG
         ext="seraph",
         tags=[ {"eid": "object"}, {"xpos": "int64"}, {"ypos": "int64"}, {"zpos": "int64"}, "..." ]
         )
-if not pl.Path(str(pl.Path(__file__).parent if "root" not in SYSDB.SYSTEM_CONFIGURATION.keys() else SYSDB.SYSTEM_CONFIGURATION["root"]) + "/_seraphanda.conf").exists():
+if not pl.Path(str(pl.Path(__file__).parent if "root" not in SYSDB.SYSTEM_CONFIGURATION.keys() else SYSDB.SYSTEM_CONFIGURATION["root"]) + "/_geocsv.conf").exists():
     print("GeoSeraphim: No Default Output Type [GeoCSV] Config Found", file=sys.stderr)
     print("GeoSeraphim: Generating Output Type [GeoCSV] Config Found", file=sys.stderr)
     MakeTypeConfig(
