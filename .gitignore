@@ -1,6 +1,8 @@
 # Python Cache
 
 */__pycache__/*
+*\__pycache__\*
+*.pyc
 
 # Data Fragments
 
@@ -38,4 +40,7 @@ data/*
 
 _upload_*.bat
 install.bat
-
+uninstall.bat
+quick_install.bat
+testfile.py
+src/*.egg-info

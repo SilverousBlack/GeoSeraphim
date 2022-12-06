@@ -12,7 +12,16 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  "GDAL > 3.0.0",
+  "rasterio > 1.0.0",
+  "numpy > 1.0.0",
+  "pandas > 1.0.0",
+  "Pillow > 9.0.0",
+  "matplotlib > 3.0.0",
+  "seaborn"
+]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+"Homepage" = "https://github.com/SilverousBlack/GeoSeraphim"
+"Bug Tracker" = "https://github.com/SilverousBlack/GeoSeraphim/issues"
