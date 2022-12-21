@@ -41,8 +41,6 @@ pandas = "^1.5.0"
 Pillow = "^9.0.0"
 matplotlib = "^3.0.0"
 seaborn = "^0.12.1"
-gdal = {path = "misc/GDAL/GDAL-3.4.3-cp310-cp310-win_amd64.whl"}
-rasterio = {path = "misc/rasterio/rasterio-1.2.10-cp310-cp310-win_amd64.whl"}
 
 [tool.poetry.group.dev.dependencies]
 numpy = "^1.0.0"

@@ -58,3 +58,6 @@ if not pl.Path(str(pl.Path(__file__).parent if "root" not in SYSDB.SYSTEM_CONFIG
     )
 
 LoadConfig()
+
+# Import Core Items
+from GeoSeraphim.Core.MarkerTypes import *
